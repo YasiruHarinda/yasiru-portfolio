@@ -99,7 +99,7 @@ export const EDUCATION = [
     year: "2025–present",
     type: "Group Project",
     image: "/images/projects/ai-tutoring.jpg",
-    links: [],
+    links: [{ label: "GitHub", href: "https://github.com/bhagyaseela/ai-feedback-tutoring-system" }],
     highlights: [],
     tech: ["Python", "LLM APIs", "Moodle"],
     role:

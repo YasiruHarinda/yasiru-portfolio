@@ -2,7 +2,8 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 export default function Footer({ profile }) {
   return (
-    <footer className="mt-16 border-t border-white/10 bg-zinc-950/40 backdrop-blur">
+    <footer id="contact" className="mt-16 border-t border-white/10 bg-zinc-950/40 backdrop-blur">
+
       <div className="mx-auto max-w-6xl px-4 py-10">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           {/* Left */}

@@ -84,7 +84,7 @@ export default function App() {
 
 
         {/* ABOUT / EDUCATION */}
-        <Section id="about" title="About & Education">
+        <Section id="about" title="Education">
           <div className="grid gap-4 md:grid-cols-2">
             {EDUCATION.map((e) => (
               <div key={e.school}

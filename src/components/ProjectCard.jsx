@@ -25,6 +25,11 @@ export default function ProjectCard({ p }) {
         <p className="mt-2 text-sm text-zinc-300">{p.type}</p>
 
         <p className="mt-4 text-zinc-200">{p.description}</p>
+        {p.features?.length > 0 && (
+          <ul className="mt-3 space-y-1 text-sm text-zinc-300">
+            {p.features.map((f) => <li key={f}>• {f}</li>)}
+          </ul>
+        )}
         <p className="mt-3 text-sm text-zinc-300"><span className="text-zinc-200">My role:</span> {p.role}</p>
 
         {p.highlights?.length > 0 && (

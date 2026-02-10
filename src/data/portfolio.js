@@ -22,20 +22,27 @@ export const EDUCATION = [
   {
     school: "D.S. Senanayake College, Colombo 7",
     program: "GCE A/L",
-    period: "2020",
+    period: "2011-2020",
     extra: "A/L: 3 A’s",
   },
 ];
 
-export const PROJECTS = [
+
+ export const PROJECTS = [
   {
     title: "PEBO – AI Desk Assistant Robot",
     year: "2025",
     type: "Group Project",
     image: "/images/projects/pebo.jpg",
     links: [
-      { label: "GitHub", href: "https://github.com/cepdnaclk/e20-3yp-P-E-BO-Desk-Companion" },
-      { label: "Site", href: "https://cepdnaclk.github.io/e20-3yp-P-E-BO-Desk-Companion/" },
+      {
+        label: "GitHub",
+        href: "https://github.com/cepdnaclk/e20-3yp-P-E-BO-Desk-Companion",
+      },
+      {
+        label: "Site",
+        href: "https://cepdnaclk.github.io/e20-3yp-P-E-BO-Desk-Companion/",
+      },
     ],
     highlights: [
       "Top 10 IESL Undergraduate Project (2025)",
@@ -46,21 +53,18 @@ export const PROJECTS = [
     role:
       "Built the voice assistant pipeline (speech-to-text + text-to-speech), supported emotion detection and user recognition integration, and contributed to AWS connectivity.",
     description:
-      "An interactive desk assistant robot offering emotional support, entertainment, task management, and voice assistance.",
+      "An interactive AI desk assistant offering emotional support, entertainment, task management, and voice assistance.",
+    features: [
+      "Natural conversation with PEBO",
+      "Intelligent, context-aware responses to user questions",
+      "Emotion-aware responses using facial expression recognition",
+      "Task reminders and music playback",
+      "Play Songs",
+      "Compact desk-friendly design for home, office, or classrooms",
+    ],
   },
-  {
-    title: "Asset & Income Tracker Mobile Application",
-    year: "2024",
-    type: "Individual Project",
-    image: "/images/projects/income.jpg",
-    links: [{ label: "GitHub", href: "https://github.com/YasiruHarinda/IncomeDashboard" }],
-    highlights: [],
-    tech: ["Flutter", "Dart", "Firebase", "BLoC"],
-    role:
-      "Designed and developed the complete app, implemented state management, integrated Firebase auth + cloud storage, and built responsive UI.",
-    description:
-      "Tracks income and assets with clear insights and graphs to understand spending patterns.",
-  },
+
+
   {
     title: "Mona Dashboard – Factory Production Monitoring System",
     year: "2024",
@@ -74,7 +78,21 @@ export const PROJECTS = [
     role:
       "Designed dashboard UI, built real-time visualizations, integrated frontend with backend services for live updates and alerts.",
     description:
-      "Real-time production monitoring system for plastic toy manufacturing to detect disruptions and respond quickly.",
+      "Real-time production monitoring system for  provide live updates on machine performance, send emergency alerts in cases of issues such as stuck parts, and maintain a historical record of production data.",
+  },
+  
+  {
+    title: "Asset & Income Tracker Mobile Application",
+    year: "2024",
+    type: "Individual Project",
+    image: "/images/projects/income.jpg",
+    links: [{ label: "GitHub", href: "https://github.com/YasiruHarinda/IncomeDashboard" }],
+    highlights: [],
+    tech: ["Flutter", "Dart", "Firebase", "BLoC"],
+    role:
+      "Designed and developed the complete app, implemented state management, integrated Firebase auth + cloud storage, and built responsive UI.",
+    description:
+      "The Income and Asset Tracking mobile application is a Flutter-based app designed to help users record and manage their income, and assets in one place. It provides clear financial insights through visual graphs and summaries, enabling users to easily understand their spending patterns and overall financial status. The app is built using Flutter to ensure a smooth, responsive, and cross-platform user experience.",
   },
   {
     title: "AI-Driven Automated Feedback & Tutoring System (Higher Education)",
@@ -87,7 +105,7 @@ export const PROJECTS = [
     role:
       "Conducted literature review, defined requirements, designed plugin workflow for personalized feedback generation using AI.",
     description:
-      "Plugin concept for scalable, context-aware feedback and tutoring in higher education.",
+      "This is my final year project. It is an AI-driven feedback and tutoring system for higher education, built as a Moodle LMS plugin. It uses a multi-agent AI engine to deliver fast, context-aware feedback and adaptive hints based on student performance.",
   },
   {
   title: "Personal Portfolio Website",
@@ -160,7 +178,8 @@ export const ACTIVITIES = [
     title: "Coding & Project Competitions",
     image: "/images/activities/competitions.jpg",
     points: [
-      "ACES Coders V 11.0 (2024), ACES PreCoders V 11.0 (2024)",
+      "ACES Coders V 11.0 (2024)",
+      "ACES PreCoders V 11.0 (2024)",
       "IESL UIY – Top 10 Projects (2025)",
       "I-TO-I – UPAA–USA Innovation Award (3rd Place) (2025)",
       "PEBO showcased at Techno 2025 & Engex 2025",

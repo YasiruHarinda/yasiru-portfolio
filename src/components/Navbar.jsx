@@ -6,7 +6,7 @@ const items = [
   { id: "CERTIFICATIONS", label: "Certifications" },
   { id: "activities", label: "Activities" },
   { id: "skills", label: "Skills" },
-  { id: "contact", label: "Contact" },
+  { id: "contact", label: "Contacts" },
 ];
 
 export default function Navbar() {

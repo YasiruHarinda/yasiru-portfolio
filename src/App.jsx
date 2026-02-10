@@ -30,29 +30,59 @@ export default function App() {
         {/* HERO */}
         <Section id="home" className="pt-28">
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-            <p className="text-sm text-zinc-300">{PROFILE.location}</p>
-            <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-6xl">
-              {PROFILE.name}
-            </h1>
-            <p className="mt-3 text-lg text-zinc-200">{PROFILE.title}</p>
-            <p className="mt-5 max-w-3xl text-zinc-300">{PROFILE.summary}</p>
+            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+              
+              {/* Left: Text */}
+              <div className="min-w-0">
+                <p className="text-sm text-zinc-300">{PROFILE.location}</p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a className="rounded-xl bg-white text-zinc-900 px-4 py-2 font-semibold"
-                 href={`mailto:${PROFILE.email}`}>
-                Email
-              </a>
-              <a className="rounded-xl border border-white/15 px-4 py-2"
-                 href={PROFILE.linkedin} target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-              <a className="rounded-xl border border-white/15 px-4 py-2"
-                 href={PROFILE.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
+                <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-6xl">
+                  {PROFILE.name}
+                </h1>
+
+                <p className="mt-3 text-lg text-zinc-200">{PROFILE.title}</p>
+                <p className="mt-5 max-w-3xl text-zinc-300">{PROFILE.summary}</p>
+
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a
+                    className="rounded-xl bg-white text-zinc-900 px-4 py-2 font-semibold"
+                    href={`mailto:${PROFILE.email}`}
+                  >
+                    Email
+                  </a>
+                  <a
+                    className="rounded-xl border border-white/15 px-4 py-2"
+                    href={PROFILE.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                  <a
+                    className="rounded-xl border border-white/15 px-4 py-2"
+                    href={PROFILE.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+
+              {/* Right: Photo */}
+              <div className="relative h-32 w-32 md:h-44 md:w-44 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-2 ring-white/10" />
+                <img
+                  src={PROFILE.photo}
+                  alt={`${PROFILE.name} profile`}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </Section>
+
 
         {/* ABOUT / EDUCATION */}
         <Section id="about" title="About & Education">
@@ -123,6 +153,9 @@ export default function App() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
             <p className="text-zinc-200">Email: {PROFILE.email}</p>
             <p className="text-zinc-200">Phone: {PROFILE.phone}</p>
+            <p className="text-zinc-200">Linkedin: {PROFILE.linkedin}</p>
+            <p className="text-zinc-200">Address: {PROFILE.address}</p>
+
           </div>
           <div className="h-20" />
         </Section>

@@ -6,6 +6,8 @@ export const PROFILE = {
   email: "harindayasiru@gmail.com",
   linkedin: "https://www.linkedin.com/in/yasiru-edirimanna",
   github: "https://github.com/YasiruHarinda",
+  address:"156/D, Remuna, Anuguruwathota",
+  photo: "/images/profile.jpg",
   summary:
     "Computer Engineering undergraduate with hands-on experience in AI-driven systems, embedded platforms, and full-stack applications. Built award-winning robotics and real-time systems using Python, React, Flutter, and cloud services.",
 };
@@ -109,7 +111,7 @@ export const EXPERIENCE = [
 ];
 
 export const CERTS = [
-  "Introduction to DevOps – IBM (2026)",
+  "DevOps and AI on AWS:Upgrading Apps with Generative AI – AWS (2026)",
   "Microsoft Azure Machine Learning for Data Scientists – Microsoft (2025)",
   "Advanced React – Meta (2024)",
   "React Basics – Meta (2024)",
@@ -129,7 +131,7 @@ export const ACTIVITIES = [
   },
   {
     title: "Coding & Project Competitions",
-    image: "/images/activities/rotaract.jpg",
+    image: "/images/activities/competitions.jpg",
     points: [
       "ACES Coders V 11.0 (2024), ACES PreCoders V 11.0 (2024)",
       "IESL UIY – Top 10 Projects (2025)",
@@ -148,9 +150,27 @@ export const ACTIVITIES = [
 ];
 
 export const SKILLS = [
-  "Python, C, Java, JavaScript",
-  "LLMs, Prompt Engineering, ML, Embedded",
-  "React, Flutter, UI/UX Design",
-  "AWS, Azure, Firebase, Node.js, SQL, MongoDB",
-  "Teamwork, Problem-Solving, Communication",
+   "Python",
+  "C",
+  "Java",
+  "JavaScript",
+  "LLMs",
+  "Prompt Engineering",
+  "Machine Learning",
+  "Embedded Systems",
+  "React",
+  "Flutter",
+  "UI/UX Design",
+  "AWS",
+  "Azure",
+  "Firebase",
+  "Node.js",
+  "SQL",
+  "MongoDB",
+  "Git",
+  "MATLAB",
+  "Teamwork",
+  "Problem-Solving",
+  "Communication",
+  
 ];

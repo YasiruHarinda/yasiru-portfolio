@@ -130,7 +130,7 @@ export default function App() {
 
         {/* EXTRACURRICULAR */}
         <Section id="activities" title="Extracurricular & Achievements">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {ACTIVITIES.map((a) => <ActivityCard key={a.title} a={a} />)}
           </div>
         </Section>

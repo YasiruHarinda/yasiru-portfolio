@@ -185,14 +185,8 @@ export const ACTIVITIES = [
       "PEBO showcased at Techno 2025 & Engex 2025",
     ],
   },
-  {
-    title: "Other",
-    image: "/images/activities/rotaract.jpg",
-    points: [
-      "Mathematics Instructor (O/L) – Arunalla Educational Program",
-      "Member, Rotaract Club (2022–2025)",
-    ],
-  },
+ 
+  
 ];
 
 export const SKILLS = [

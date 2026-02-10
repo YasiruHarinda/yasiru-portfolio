@@ -9,7 +9,7 @@ export const PROFILE = {
   address:"156/D, Remuna, Anuguruwathota",
   photo: "/images/profile.jpg",
   summary:
-    "Computer Engineering undergraduate at the University of Peradeniya with hands-on experience building AI-driven systems, embedded platforms, and full-stack web applications. I’ve delivered real-time dashboards, ML prototypes, and an award-winning desk assistant robot (PEBO) integrating voice interaction, emotion detection, and cloud-backed services. I enjoy turning messy requirements into clean, scalable solutions combining Python, React, Flutter, MongoDB, and AWS/Azure with solid engineering practices. I’m seeking an engineering internship where I can contribute to production-ready software, learn from experienced teams, and ship features that create measurable impact.",
+    "Computer Engineering undergraduate at the University of Peradeniya with hands on experience in AI systems, embedded platforms, and full-stack web apps. I’ve built real-time dashboards, ML prototypes, and PEBO an award winning desk assistant robot with voice interaction, emotion detection, and cloud services. I enjoy turning messy requirements into scalable solutions using Python, React, Flutter, MongoDB, and AWS/Azure. Seeking an engineering internship to ship production-ready features, learn from experienced teams, and deliver measurable impact.",
 };
 
 export const EDUCATION = [

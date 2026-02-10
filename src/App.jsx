@@ -5,7 +5,7 @@ import Section from "./components/Section";
 import ProjectCard from "./components/ProjectCard";
 import ActivityCard from "./components/ActivityCard";
 import {
-  PROFILE, EDUCATION, PROJECTS, EXPERIENCE, CERTS, ACTIVITIES, SKILLS
+  PROFILE, EDUCATION, PROJECTS, EXPERIENCE,  CERTS, ACTIVITIES, SKILLS
 } from "./data/portfolio";
 
 export default function App() {
@@ -150,7 +150,7 @@ export default function App() {
             <p className="text-zinc-200">Email: {PROFILE.email}</p>
             <p className="text-zinc-200">Phone: {PROFILE.phone}</p>
             <p className="text-zinc-200">Linkedin: {PROFILE.linkedin}</p>
-            <p className="text-zinc-200">Address: {PROFILE.address}</p>
+            
 
           </div>
           <div className="h-20" />

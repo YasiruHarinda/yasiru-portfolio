@@ -110,7 +110,7 @@ export const EXPERIENCE = [
   },
 ];
 
-export const CERTIFICATIONS = [
+export const CERTS= [
   "DevOps and AI on AWS:Upgrading Apps with Generative AI – AWS (2026)",
   "Microsoft Azure Machine Learning for Data Scientists – Microsoft (2025)",
   "Advanced React – Meta (2024)",

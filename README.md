@@ -1,5 +1,7 @@
 # Yasiru Portfolio (React + Vite)
 
+🌐: [yasiru-portfolio-blj2.vercel.app](https://yasiru-portfolio-blj2.vercel.app/)
+
 A modern, single-page portfolio website built with **React (Vite)**, **TailwindCSS**, **Framer Motion** animations, and smooth scrolling.  
 Includes sections for **About**, **Projects**, **Experience**, **Certifications**, **Skills**, and **Extracurricular Activities** with image-based cards.
 

@@ -3,7 +3,7 @@ const items = [
   { id: "about", label: "About" },
   { id: "projects", label: "Projects" },
   { id: "experience", label: "Experience" },
-  { id: "certs", label: "Certs" },
+  { id: "CERTIFICATIONS", label: "Certifications" },
   { id: "activities", label: "Activities" },
   { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },

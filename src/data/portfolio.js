@@ -1,5 +1,5 @@
 export const PROFILE = {
-  name: "Yasiru Edirimanna",
+  name: "Yasiru Harinda Edirimanna",
   title: "Computer Engineering Undergraduate",
   location: "Colombo, Sri Lanka",
   phone: "+94 768361089",
@@ -9,7 +9,7 @@ export const PROFILE = {
   address:"156/D, Remuna, Anuguruwathota",
   photo: "/images/profile.jpg",
   summary:
-    "Computer Engineering undergraduate with hands-on experience in AI-driven systems, embedded platforms, and full-stack applications. Built award-winning robotics and real-time systems using Python, React, Flutter, and cloud services.",
+    "Computer Engineering undergraduate at the University of Peradeniya with hands-on experience building AI-driven systems, embedded platforms, and full-stack web applications. I’ve delivered real-time dashboards, ML prototypes, and an award-winning desk assistant robot (PEBO) integrating voice interaction, emotion detection, and cloud-backed services. I enjoy turning messy requirements into clean, scalable solutions combining Python, React, Flutter, MongoDB, and AWS/Azure with solid engineering practices. I’m seeking an engineering internship where I can contribute to production-ready software, learn from experienced teams, and ship features that create measurable impact.",
 };
 
 export const EDUCATION = [
@@ -35,7 +35,7 @@ export const PROJECTS = [
     image: "/images/projects/pebo.jpg",
     links: [
       { label: "GitHub", href: "https://github.com/cepdnaclk/e20-3yp-P-E-BO-Desk-Companion" },
-      { label: "Demo", href: "https://cepdnaclk.github.io/e20-3yp-P-E-BO-Desk-Companion/" },
+      { label: "Site", href: "https://cepdnaclk.github.io/e20-3yp-P-E-BO-Desk-Companion/" },
     ],
     highlights: [
       "Top 10 IESL Undergraduate Project (2025)",
@@ -66,7 +66,9 @@ export const PROJECTS = [
     year: "2024",
     type: "Group Project",
     image: "/images/projects/mona.jpg",
-    links: [{ label: "GitHub", href: "https://github.com/cepdnaclk/e20-co227-MONA-Dashboard" }],
+    links: [{ label: "GitHub", href: "https://github.com/cepdnaclk/e20-co227-MONA-Dashboard" },
+      { label: "Site", href: "https://cepdnaclk.github.io/e20-co227-MONA-Dashboard/" },
+    ],
     highlights: [],
     tech: ["MongoDB", "React", "Node.js"],
     role:
@@ -88,6 +90,28 @@ export const PROJECTS = [
       "Plugin concept for scalable, context-aware feedback and tutoring in higher education.",
   },
   {
+  title: "Personal Portfolio Website",
+  year: "2026",
+  type: "Individual Project",
+  image: "/images/projects/portfolio.jpg",
+  links: [
+    { label: "GitHub", href: "https://github.com/YasiruHarinda/yasiru-portfolio" },
+    { label: "Site", href: "https://yasiru-portfolio-blj2.vercel.app/" },
+  ],
+  highlights: [
+    "Deployed on Vercel with CI/CD via GitHub",
+    "Single-page layout with smooth scroll navigation",
+    "Animated sections and responsive UI",
+  ],
+  tech: ["React", "Vite", "TailwindCSS", "Framer Motion", "Lenis"],
+  role:
+    "Designed and built the full UI, implemented section-based navigation, animations, and responsive layout, and deployed the site on Vercel.",
+  description:
+    "A modern one-page portfolio to showcase projects, skills, certifications, and activities with an attractive UI and smooth interactions.",
+},
+
+
+  {
     title: "Air Quality Analyser – Hybrid LSTM & Fuzzy Logic Model",
     year: "2025",
     type: "Group Project",
@@ -100,6 +124,9 @@ export const PROJECTS = [
     description:
       "Hybrid forecasting model combining LSTM with fuzzy logic to improve air quality prediction accuracy.",
   },
+
+
+
 ];
 
 export const EXPERIENCE = [
@@ -110,7 +137,7 @@ export const EXPERIENCE = [
   },
 ];
 
-export const CERTS= [
+export const CERTIFICATIONS= [
   "DevOps and AI on AWS:Upgrading Apps with Generative AI – AWS (2026)",
   "Microsoft Azure Machine Learning for Data Scientists – Microsoft (2025)",
   "Advanced React – Meta (2024)",

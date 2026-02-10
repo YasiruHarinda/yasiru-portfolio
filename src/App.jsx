@@ -4,8 +4,10 @@ import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import ProjectCard from "./components/ProjectCard";
 import ActivityCard from "./components/ActivityCard";
+import Footer from "./components/Footer";
+
 import {
-  PROFILE, EDUCATION, PROJECTS, EXPERIENCE,  CERTS, ACTIVITIES, SKILLS
+  PROFILE, EDUCATION, PROJECTS, EXPERIENCE,  CERTIFICATIONS, ACTIVITIES, SKILLS
 } from "./data/portfolio";
 
 export default function App() {
@@ -34,18 +36,19 @@ export default function App() {
               
               {/* Left: Text */}
               <div className="min-w-0">
-                <p className="text-sm text-zinc-300">{PROFILE.location}</p>
+                
 
                 <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-6xl">
                   {PROFILE.name}
                 </h1>
 
                 <p className="mt-3 text-lg text-zinc-200">{PROFILE.title}</p>
+                <p className="text-sm text-zinc-300">{PROFILE.location}</p>
                 <p className="mt-5 max-w-3xl text-zinc-300">{PROFILE.summary}</p>
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   <a
-                    className="rounded-xl bg-white text-zinc-900 px-4 py-2 font-semibold"
+                    className="rounded-xl border border-white/15 px-4 py-2"
                     href={`mailto:${PROFILE.email}`}
                   >
                     Email
@@ -120,7 +123,7 @@ export default function App() {
         <Section id="CERTIFICATIONS" title="Certifications">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
             <ul className="grid gap-2 md:grid-cols-2">
-              {CERTS.map((c) => <li key={c} className="text-zinc-200">• {c}</li>)}
+              {CERTIFICATIONS.map((c) => <li key={c} className="text-zinc-200">• {c}</li>)}
             </ul>
           </div>
         </Section>
@@ -145,16 +148,7 @@ export default function App() {
         </Section>
 
         {/* CONTACT */}
-        <Section id="contact" title="Contact">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-            <p className="text-zinc-200">Email: {PROFILE.email}</p>
-            <p className="text-zinc-200">Phone: {PROFILE.phone}</p>
-            <p className="text-zinc-200">Linkedin: {PROFILE.linkedin}</p>
-            
-
-          </div>
-          <div className="h-20" />
-        </Section>
+        <Footer profile={PROFILE} />
       </main>
     </div>
   );

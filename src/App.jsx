@@ -30,7 +30,7 @@ export default function App() {
         {/* HERO */}
         <Section id="home" className="pt-28">
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="grid grid-cols-[1fr_auto] items-start gap-4 md:gap-8">
               
               {/* Left: Text */}
               <div className="min-w-0">
@@ -70,14 +70,10 @@ export default function App() {
               </div>
 
               {/* Right: Photo */}
-              <div className="relative h-32 w-32 md:h-44 md:w-44 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-2 ring-white/10" />
-                <img
-                  src={PROFILE.photo}
-                  alt={`${PROFILE.name} profile`}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
+              <div className="shrink-0">
+                <div className="h-20 w-20 md:h-44 md:w-44 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+                  <img src={PROFILE.photo} alt="" className="h-full w-full object-cover" />
+                </div>
               </div>
             </div>
           </div>
@@ -121,7 +117,7 @@ export default function App() {
         </Section>
 
         {/* CERTIFICATIONS */}
-        <Section id="certs" title="Certifications">
+        <Section id="CERTIFICATIONS" title="Certifications">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
             <ul className="grid gap-2 md:grid-cols-2">
               {CERTS.map((c) => <li key={c} className="text-zinc-200">• {c}</li>)}

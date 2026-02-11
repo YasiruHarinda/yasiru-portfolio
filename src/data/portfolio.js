@@ -158,7 +158,7 @@ export const EXPERIENCE = [
 export const CERTIFICATIONS = [
   {
     title: "DevOps and AI on AWS: Upgrading Apps with Generative AI – AWS (2026)",
-    href: "https://www.linkedin.com/in/yasiru-edirimanna/details/certifications/",
+    href: "https://www.coursera.org/account/accomplishments/verify/QHZVS7JJHQOZ",
   },
   {
     title: "Microsoft Azure Machine Learning for Data Scientists – Microsoft (2025)",

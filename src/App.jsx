@@ -123,7 +123,20 @@ export default function App() {
         <Section id="CERTIFICATIONS" title="Certifications">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
             <ul className="grid gap-2 md:grid-cols-2">
-              {CERTIFICATIONS.map((c) => <li key={c} className="text-zinc-200">• {c}</li>)}
+              {CERTIFICATIONS.map((c) => (
+                        <li key={c.title} className="text-zinc-200">
+                          •{" "}
+                          <a
+                            href={c.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-zinc-200 underline decoration-white/20 underline-offset-4 hover:decoration-white/60"
+                          >
+                            {c.title}
+                          </a>
+                        </li>
+                      ))}
+
             </ul>
           </div>
         </Section>

@@ -155,15 +155,37 @@ export const EXPERIENCE = [
   },
 ];
 
-export const CERTIFICATIONS= [
-  "DevOps and AI on AWS:Upgrading Apps with Generative AI – AWS (2026)",
-  "Microsoft Azure Machine Learning for Data Scientists – Microsoft (2025)",
-  "Advanced React – Meta (2024)",
-  "React Basics – Meta (2024)",
-  "Databases and SQL for Data Science with Python – IBM (2024)",
-  "Certification Program in Microsoft – SLIIT (2021)",
-  "Spoken English for Professional Excellence – Aquinas (2021)",
+export const CERTIFICATIONS = [
+  {
+    title: "DevOps and AI on AWS: Upgrading Apps with Generative AI – AWS (2026)",
+    href: "https://www.linkedin.com/in/yasiru-edirimanna/details/certifications/",
+  },
+  {
+    title: "Microsoft Azure Machine Learning for Data Scientists – Microsoft (2025)",
+    href: "https://www.coursera.org/account/accomplishments/verify/YTHKREPDOYNL",
+  },
+  {
+    title: "Advanced React – Meta (2024)",
+    href: "https://www.coursera.org/account/accomplishments/verify/0HKMJ1DHVMYJ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+  },
+  {
+    title: "React Basics – Meta (2024)",
+    href: "https://www.coursera.org/account/accomplishments/verify/DZXSRXTXNDZV",
+  },
+  {
+    title: "Databases and SQL for Data Science with Python – IBM (2024)",
+    href: "https://www.coursera.org/account/accomplishments/verify/BGWCTRVBIQXZ",
+  },
+  {
+    title: "Certification Program in Microsoft – SLIIT (2021)",
+    href: "https://www.linkedin.com/in/yasiru-edirimanna/overlay/Certifications/30661056/treasury/?profileId=ACoAAC2LquoBufcFDlPejK0Cic1RQ7GZMMw6NBI",
+  },
+  {
+    title: "Spoken English for Professional Excellence – Aquinas (2021)",
+    href: "https://www.linkedin.com/in/yasiru-edirimanna/overlay/Certifications/29999680/treasury/?profileId=ACoAAC2LquoBufcFDlPejK0Cic1RQ7GZMMw6NBI",
+  },
 ];
+
 
 export const ACTIVITIES = [
   {
@@ -171,7 +193,7 @@ export const ACTIVITIES = [
     image: "/images/activities/air-rifle.jpg",
     points: [
       "SLSSSA Air Rifle and Pistol Shooting Competition (2023, 2024)",
-      "Magam Open Shooting Championship (2023)",
+      "Magam Open Shooting Championship (2023,2024)",
     ],
   },
   {

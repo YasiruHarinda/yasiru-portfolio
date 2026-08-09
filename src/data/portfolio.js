@@ -9,7 +9,7 @@ export const PROFILE = {
   address:"156/D, Remuna, Anuguruwathota",
   photo: "/images/profile.jpg",
   summary:
-    "Computer Engineering undergraduate at the University of Peradeniya with hands on experience in AI systems, embedded platforms, and full-stack web apps. I’ve built real-time dashboards, ML prototypes, and PEBO an award winning desk assistant robot with voice interaction, emotion detection, and cloud services. I enjoy turning messy requirements into scalable solutions using Python, React, Flutter, MongoDB, and AWS/Azure. Seeking an engineering internship to ship production-ready features, learn from experienced teams, and deliver measurable impact.",
+    "Computer Engineering undergraduate with professional software engineering experience at WSO2, specializing in full-stack development, AI-driven systems, and cloud solutions, with a strong foundation in software engineering, embedded systems, and real-time applications. Recognized for award-winning engineering projects and seeking a full-time software engineering role to build reliable, scalable, production-ready solutions.",
 };
 
 export const EDUCATION = [
@@ -30,7 +30,7 @@ export const EDUCATION = [
 
  export const PROJECTS = [
   {
-    title: "GRC Platform",
+    title: "WSO2 GRC Platform",
     year: "2026 – Present",
     type: "Group Project",
     image: null,
@@ -41,11 +41,11 @@ export const EDUCATION = [
       },
     ],
     highlights: [],
-    tech: ["React", "TypeScript", "Go", "MySQL", "WSO2 Asgardeo", "WSO2 Choreo"],
+    tech: ["React", "TypeScript", "Go", "MySQL", "WSO2 Asgardeo", "WSO2 Choreo", "Azure Storage"],
     role:
-      "Designed and implemented backend services for audit control management, evidence submission, and audit trail tracking, and built the corresponding React frontend for audit workflows. Designed and implemented the compliance entity and AI validation agent for audit evidence.",
+      "Designed and implemented backend services and the corresponding React frontend for audit workflows, covering audit control management, evidence submission, and audit trail tracking. Designed and implemented the compliance entity and AI validation agent for audit evidence.",
     description:
-      "Building a Governance, Risk, and Compliance (GRC) platform for managing audits, risks, controls, compliance obligations, audit evidence, and remediation activities.",
+      "Building a Governance, Risk, and Compliance (GRC) platform for managing audits, risks, controls, compliance obligations, audit evidence, and remediation activities for WSO2.",
   },
 
   {

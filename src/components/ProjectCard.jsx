@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 import { FaShieldAlt } from "react-icons/fa";
+import { useSpotlight } from "../hooks/useSpotlight";
+import SpotlightOverlay from "./SpotlightOverlay";
 
 export default function ProjectCard({ p }) {
+  const { ref: cardRef, onMouseMove } = useSpotlight();
+
   return (
     <motion.article
+      ref={cardRef}
+      onMouseMove={onMouseMove}
       whileHover={{ y: -6 }}
       transition={{ type: "spring", stiffness: 250, damping: 18 }}
-      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur transition-shadow duration-300 hover:border-white/20 hover:shadow-[0_0_40px_-10px_rgba(217,70,239,0.35)]"
+      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur transition-colors duration-300 hover:border-white/20"
     >
-      <div
-        className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{
-          background:
-            "linear-gradient(120deg, rgba(217,70,239,0.15), transparent 40%, rgba(34,211,238,0.15))",
-        }}
-      />
+      <SpotlightOverlay />
 
       <div className="aspect-[16/9] w-full overflow-hidden bg-white/5">
         {p.image ? (
@@ -25,8 +25,8 @@ export default function ProjectCard({ p }) {
             loading="lazy"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-fuchsia-600/20 via-zinc-900 to-cyan-500/20">
-            <FaShieldAlt className="h-12 w-12 text-white/30 transition-transform duration-500 group-hover:scale-110" />
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-indigo-500/15 via-zinc-900 to-indigo-400/10">
+            <FaShieldAlt className="h-12 w-12 text-white/25 transition-transform duration-500 group-hover:scale-110" />
           </div>
         )}
       </div>

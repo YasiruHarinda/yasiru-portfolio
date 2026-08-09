@@ -30,6 +30,25 @@ export const EDUCATION = [
 
  export const PROJECTS = [
   {
+    title: "GRC Platform",
+    year: "2026 – Present",
+    type: "Group Project",
+    image: null,
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/wso2-open-operations/grc-tools",
+      },
+    ],
+    highlights: [],
+    tech: ["React", "TypeScript", "Go", "MySQL", "WSO2 Asgardeo", "WSO2 Choreo"],
+    role:
+      "Designed and implemented backend services for audit control management, evidence submission, and audit trail tracking, and built the corresponding React frontend for audit workflows. Designed and implemented the compliance entity and AI validation agent for audit evidence.",
+    description:
+      "Building a Governance, Risk, and Compliance (GRC) platform for managing audits, risks, controls, compliance obligations, audit evidence, and remediation activities.",
+  },
+
+  {
     title: "PEBO – AI Desk Assistant Robot",
     year: "2025",
     type: "Group Project",
@@ -148,6 +167,11 @@ export const EDUCATION = [
 ];
 
 export const EXPERIENCE = [
+  {
+    title: "Software Engineering Intern",
+    org: "Customer Success, WSO2",
+    year: "2026 – Present",
+  },
   {
     title: "Casual Instructor – CO226 (Database Systems)",
     org: "Department of Computer Engineering, University of Peradeniya",

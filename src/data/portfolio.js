@@ -9,7 +9,7 @@ export const PROFILE = {
   address:"156/D, Remuna, Anuguruwathota",
   photo: "/images/profile.jpg",
   summary:
-    "Computer Engineering undergraduate with professional software engineering experience at WSO2, specializing in full-stack development, AI-driven systems, and cloud solutions, with a strong foundation in software engineering, embedded systems, and real-time applications. Recognized for award-winning engineering projects and seeking a full-time software engineering role to build reliable, scalable, production-ready solutions.",
+    "Computer Engineering undergraduate with professional software engineering experience at WSO2, specializing in full-stack development, AI-driven systems, and cloud solutions, with a strong foundation in software engineering, embedded systems, and real-time applications. Recognized for award-winning engineering projects and seeking a full-stack software engineering role to build reliable, scalable, production-ready solutions.",
 };
 
 export const EDUCATION = [

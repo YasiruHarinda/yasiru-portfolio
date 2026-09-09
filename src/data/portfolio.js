@@ -162,7 +162,28 @@ export const EDUCATION = [
       "Hybrid forecasting model combining LSTM with fuzzy logic to improve air quality prediction accuracy.",
   },
 
-
+  {
+    title: "DECP - Department Engagement & Career Platform",
+    year: "2025",
+    type: "Group Project",
+    image: "/images/projects/decp.png",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/YasiruHarinda/CO528-Labs/tree/main/mini_project",
+      },
+      {
+        label: "Report (PDF)",
+        href: "https://github.com/YasiruHarinda/CO528-Labs/blob/main/mini_project/decp_Mini_Project_CO528.pdf",
+      },
+    ],
+    highlights: [],
+    tech: ["React Native", "Expo", "Node.js", "Express", "Firebase", "JavaScript"],
+    role:
+      "Contributed to the software architecture design and built frontend and backend components, including authentication, the social feed, and integration with live department event and student-profile APIs.",
+    description:
+      "Applied Software Architecture (CO528) mini project. A web and mobile platform for current students and alumni of the Computer Engineering department to connect, share posts, apply for jobs and internships, collaborate on research, and stay up to date with department events. Built with a single-page web client, a React Native (Expo) mobile app, and a Node.js/Express backend on Firebase (Firestore, Auth, Storage).",
+  },
 
 ];
 

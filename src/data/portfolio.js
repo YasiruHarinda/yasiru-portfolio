@@ -33,7 +33,7 @@ export const EDUCATION = [
     title: "WSO2 GRC Platform",
     year: "2026 – Present",
     type: "Group Project",
-    image: null,
+    image: "/images/projects/grc-platform.png",
     links: [
       {
         label: "GitHub",

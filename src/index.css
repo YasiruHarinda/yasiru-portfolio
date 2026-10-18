@@ -72,6 +72,37 @@ html.lenis body {
   overflow: hidden;
 }
 
+/* Full-width horizontal slider whose first card lines up with .container-x content.
+   --gutter mirrors container-x's px-4 / sm:px-6 / lg:px-10, and 80rem is its max-w-7xl. */
+.bleed-x {
+  --gutter: 1rem;
+  --inset: max(var(--gutter), calc((100% - 80rem) / 2 + var(--gutter)));
+  padding-inline: var(--inset);
+  scroll-padding-inline: var(--inset);
+}
+@media (min-width: 640px) {
+  .bleed-x { --gutter: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .bleed-x { --gutter: 2.5rem; }
+}
+
+.slider-track {
+  scrollbar-width: none;
+  cursor: grab;
+}
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+.slider-track.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+.slider-track.is-dragging img {
+  pointer-events: none;
+}
+
 .marquee-mask {
   mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
 }

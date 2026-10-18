@@ -27,6 +27,17 @@ export default function About() {
           scrollTrigger: { trigger: ".about-text", start: "top 80%", end: "bottom 45%", scrub: true },
         }
       );
+
+      // The photo starts black and white and gains its colour as it scrolls into view.
+      gsap.fromTo(
+        ".about-photo",
+        { filter: "grayscale(1)" },
+        {
+          filter: "grayscale(0)",
+          ease: "none",
+          scrollTrigger: { trigger: ".about-photo", start: "top 85%", end: "center 45%", scrub: true },
+        }
+      );
     }, root);
     return () => ctx.revert();
   }, []);
@@ -44,7 +55,7 @@ export default function About() {
             <img
               src={asset(PROFILE.photo)}
               alt={PROFILE.name}
-              className="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              className="about-photo h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink-950/90 to-transparent p-5">

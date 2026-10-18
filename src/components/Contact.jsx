@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaMedium } from "react-icons/fa";
 import { FiArrowUp, FiArrowUpRight, FiCheck, FiCopy, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { PROFILE } from "../data/portfolio";
 import { scrollToId } from "../lib/scroll";
@@ -20,6 +21,7 @@ export default function Contact() {
     { label: "Email", href: `mailto:${PROFILE.email}`, icon: FiMail },
     { label: "LinkedIn", href: PROFILE.linkedin, icon: FiLinkedin },
     { label: "GitHub", href: PROFILE.github, icon: FiGithub },
+    { label: "Medium", href: PROFILE.medium, icon: FaMedium },
   ];
 
   return (
@@ -58,9 +60,12 @@ export default function Contact() {
           </button>
         </div>
 
-        <ul className="mt-20 grid border-t border-white/10 sm:grid-cols-3">
+        <ul className="mt-20 grid border-t border-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {links.map(({ label, href, icon: Icon }) => (
-            <li key={label} className="border-b border-white/10 sm:border-b-0 sm:border-r sm:last:border-r-0">
+            <li
+              key={label}
+              className="border-b border-white/10 sm:odd:border-r sm:[&:nth-last-child(-n+2)]:border-b-0 lg:border-r lg:last:border-r-0"
+            >
               <a
                 href={href}
                 target={href.startsWith("mailto") ? undefined : "_blank"}

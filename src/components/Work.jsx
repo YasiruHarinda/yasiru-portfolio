@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FEATURED_PROJECTS, PROJECT_FILTERS, PROJECTS } from "../data/portfolio";
 import { ScrollTrigger } from "../lib/scroll";
 import FeaturedProject from "./FeaturedProject";
-import ProjectCard from "./ProjectCard";
+import ProjectSlider from "./ProjectSlider";
 import SectionHeading from "./SectionHeading";
 
 export default function Work() {
@@ -49,14 +49,10 @@ export default function Work() {
             ))}
           </div>
         </div>
+      </div>
 
-        <motion.div layout className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          <AnimatePresence mode="popLayout">
-            {shown.map((p) => (
-              <ProjectCard key={p.title} p={p} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+      <div className="mt-8">
+        <ProjectSlider projects={shown} resetKey={filter} />
       </div>
     </section>
   );

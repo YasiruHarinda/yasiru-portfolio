@@ -1,4 +1,5 @@
 import { lazy, Suspense, useLayoutEffect, useRef } from "react";
+import { FaMedium } from "react-icons/fa";
 import { FiArrowDown, FiArrowUpRight, FiGithub, FiLinkedin } from "react-icons/fi";
 import { PROFILE } from "../data/portfolio";
 import { gsap, prefersReducedMotion, scrollToId } from "../lib/scroll";
@@ -92,6 +93,9 @@ export default function Hero() {
             </a>
             <a href={PROFILE.linkedin} target="_blank" rel="noreferrer" className="btn-ghost" aria-label="LinkedIn">
               <FiLinkedin /> LinkedIn
+            </a>
+            <a href={PROFILE.medium} target="_blank" rel="noreferrer" className="btn-ghost" aria-label="Medium">
+              <FaMedium /> Medium
             </a>
           </div>
         </div>

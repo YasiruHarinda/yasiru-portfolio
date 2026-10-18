@@ -5,7 +5,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useSpotlight } from "../hooks/useSpotlight";
 import SpotlightOverlay from "./SpotlightOverlay";
 
-const ProjectCard = forwardRef(function ProjectCard({ p }, outerRef) {
+const ProjectCard = forwardRef(function ProjectCard({ p, className = "" }, outerRef) {
   const { ref: cardRef, onMouseMove } = useSpotlight();
 
   return (
@@ -16,7 +16,7 @@ const ProjectCard = forwardRef(function ProjectCard({ p }, outerRef) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.96 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      className="h-full"
+      className={`h-full ${className}`}
     >
       <div
         ref={cardRef}

@@ -9,6 +9,7 @@ export const PROFILE = {
   email: "harindayasiru@gmail.com",
   linkedin: "https://www.linkedin.com/in/yasiru-edirimanna",
   github: "https://github.com/YasiruHarinda",
+  medium: "https://medium.com/@harindayasiru",
   photo: "/images/profile.jpg",
   summary:
     "Computer Engineering graduate with a strong interest in full-stack development, AI-driven systems, cloud computing, DevOps and embedded systems. Passionate about designing innovative, scalable solutions and exploring emerging technologies to solve real-world problems.",
@@ -359,7 +360,7 @@ export const TECH_STACK = [
 export const EDUCATION = [
   {
     school: "University of Peradeniya",
-    program: "BSc Engineering (Hons) — Computer Engineering",
+    program: "BSc Eng(Hons) Computer Engineering",
     period: "2022 – 2026",
     extra: "Graduated",
   },
@@ -372,6 +373,18 @@ export const EDUCATION = [
 ];
 
 export const CERTIFICATIONS = [
+  {
+    title: "WSO2 Certified Identity Server Developer - V7",
+    issuer: "WSO2",
+    year: "2026",
+    href: "https://certification.wso2.com/certificate/CID-05606523/a09VM00000JWMosYAH",
+  },
+  {
+    title: "WSO2 Certified Identity Server Practitioner - V7",
+    issuer: "WSO2",
+    year: "2026",
+    href: "https://certification.wso2.com/certificate/CID-05606523/a09VM00000JWPRlYAP",
+  },
   {
     title: "DevOps and AI on AWS: Upgrading Apps with Generative AI",
     issuer: "AWS",

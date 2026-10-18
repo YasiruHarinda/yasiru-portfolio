@@ -1,10 +1,87 @@
-/* stylelint-disable-next-line */ 
+/* stylelint-disable-next-line */
 @tailwind base;
 /* stylelint-disable-next-line */
 @tailwind components;
 /* stylelint-disable-next-line */
 @tailwind utilities;
 
-html, body {
-  height: 100%;
+@layer base {
+  html {
+    background: #0a0a0b;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-ink-950 font-sans text-zinc-100 antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: #c6f24e;
+    color: #0a0a0b;
+  }
+  :focus-visible {
+    outline: 2px solid #c6f24e;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10;
+  }
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-signal;
+  }
+  .chip {
+    @apply rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-zinc-300;
+  }
+  .card {
+    @apply rounded-3xl border border-white/[0.08] bg-ink-900/80;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300;
+  }
+  .btn-primary {
+    @apply btn bg-signal text-ink-950 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_rgba(198,242,78,0.6)];
+  }
+  .btn-ghost {
+    @apply btn border border-white/15 text-zinc-200 hover:-translate-y-0.5 hover:border-white/40 hover:text-white;
+  }
+}
+
+/* Film-grain overlay for depth on flat dark backgrounds */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

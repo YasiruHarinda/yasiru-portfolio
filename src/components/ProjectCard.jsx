@@ -1,85 +1,91 @@
+import { asset } from "../lib/asset";
+import { forwardRef } from "react";
 import { motion } from "framer-motion";
-import { FaShieldAlt } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 import { useSpotlight } from "../hooks/useSpotlight";
 import SpotlightOverlay from "./SpotlightOverlay";
 
-export default function ProjectCard({ p }) {
+const ProjectCard = forwardRef(function ProjectCard({ p }, outerRef) {
   const { ref: cardRef, onMouseMove } = useSpotlight();
 
   return (
     <motion.article
-      ref={cardRef}
-      onMouseMove={onMouseMove}
-      whileHover={{ y: -6 }}
-      transition={{ type: "spring", stiffness: 250, damping: 18 }}
-      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur transition-colors duration-300 hover:border-white/20"
+      ref={outerRef}
+      layout
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.96 }}
+      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      className="h-full"
     >
-      <SpotlightOverlay />
+      <div
+        ref={cardRef}
+        onMouseMove={onMouseMove}
+        className="card group relative flex h-full flex-col overflow-hidden transition-colors duration-300 hover:border-white/20"
+      >
+        <SpotlightOverlay color="198,242,78" opacity={0.08} />
 
-      <div className="aspect-[16/9] w-full overflow-hidden bg-white/5">
-        {p.image ? (
+        <div className="relative aspect-[16/9] overflow-hidden bg-ink-850">
           <img
-            src={p.image}
-            alt={p.title}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src={asset(p.image)}
+            alt=""
             loading="lazy"
+            className="h-full w-full object-cover opacity-85 transition duration-700 group-hover:scale-105 group-hover:opacity-100"
           />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-indigo-500/15 via-zinc-900 to-indigo-400/10">
-            <FaShieldAlt className="h-12 w-12 text-white/25 transition-transform duration-500 group-hover:scale-110" />
+          <div className="absolute left-4 top-4 flex flex-wrap gap-2">
+            {p.categories.map((c) => (
+              <span key={c} className="rounded-full bg-ink-950/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-zinc-200 backdrop-blur">
+                {c}
+              </span>
+            ))}
           </div>
-        )}
-      </div>
-
-      <div className="relative p-6">
-        <div className="flex items-center justify-between gap-3">
-          <h3 className="text-xl font-semibold">{p.title}</h3>
-          <span className="text-sm text-zinc-300">{p.year}</span>
         </div>
 
-        <p className="mt-2 text-sm text-zinc-300">{p.type}</p>
+        <div className="relative flex flex-1 flex-col p-6">
+          <div className="flex items-baseline justify-between gap-4 font-mono text-xs text-zinc-500">
+            <span>{p.type}</span>
+            <span className="shrink-0">{p.year}</span>
+          </div>
+          <h3 className="mt-3 font-display text-2xl font-semibold leading-tight tracking-tight text-white">{p.title}</h3>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">{p.description}</p>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+            <span className="text-zinc-200">My role: </span>
+            {p.role}
+          </p>
 
-        <p className="mt-4 text-zinc-200">{p.description}</p>
-        {p.features?.length > 0 && (
-          <ul className="mt-3 space-y-1 text-sm text-zinc-300">
-            {p.features.map((f) => <li key={f}>• {f}</li>)}
-          </ul>
-        )}
-        <p className="mt-3 text-sm text-zinc-300"><span className="text-zinc-200">My role:</span> {p.role}</p>
+          {p.highlights?.length > 0 && (
+            <ul className="mt-4 space-y-1 text-sm text-signal">
+              {p.highlights.map((h) => (
+                <li key={h}>★ {h}</li>
+              ))}
+            </ul>
+          )}
 
-        {p.highlights?.length > 0 && (
-          <ul className="mt-4 space-y-1 text-sm text-zinc-200">
-            {p.highlights.map((h) => <li key={h}>• {h}</li>)}
-          </ul>
-        )}
+          <div className="mt-5 flex flex-wrap gap-1.5">
+            {p.tech.map((t) => (
+              <span key={t} className="chip !text-[11px]">
+                {t}
+              </span>
+            ))}
+          </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {p.tech.map((t) => (
-            <span
-              key={t}
-              className="rounded-xl border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-200 transition-colors duration-200 hover:border-white/30 hover:bg-white/10"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-
-        {p.links?.length > 0 && (
-          <div className="mt-5 flex flex-wrap gap-3">
+          <div className="mt-auto flex flex-wrap gap-4 pt-6">
             {p.links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-xl bg-white text-zinc-900 px-3 py-2 text-sm font-semibold transition-transform duration-200 hover:scale-105 hover:opacity-90"
+                className="inline-flex items-center gap-1 text-sm font-medium text-white underline decoration-white/20 underline-offset-4 transition-colors hover:text-signal hover:decoration-signal"
               >
-                {l.label}
+                {l.label} <FiArrowUpRight />
               </a>
             ))}
           </div>
-        )}
+        </div>
       </div>
     </motion.article>
   );
-}
+});
+
+export default ProjectCard;

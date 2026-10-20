@@ -24,6 +24,6 @@
   <circle cx="560" cy="300" r="38" fill="none" stroke="#c6f24e" stroke-width="4" opacity="0.5"/>
   <text x="600" y="250" fill="#e4e4e7" font-family="monospace" font-size="32">payday: safe to buy</text>
   <!-- title -->
-  <text x="120" y="170" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="104">Buy or Wait?</text>
-  <text x="124" y="790" fill="#a1a1aa" font-family="monospace" font-size="34">90-day balance forecast · pay now · split · installments · wait</text>
+  <text x="120" y="805" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="104">Buy or Wait?</text>
+  <text x="1480" y="110" fill="#a1a1aa" font-family="monospace" font-size="34" text-anchor="end">90-day balance forecast</text>
 </svg>

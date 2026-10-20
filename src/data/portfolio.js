@@ -337,7 +337,7 @@ export const PROJECTS = [
     type: "Competition · HackerRank Orchestrate (24-hour hackathon)",
     categories: ["AI / ML"],
     image: "/images/projects/buy-or-wait.svg",
-    links: [],
+    links: [{ label: "GitHub", href: "https://github.com/YasiruHarinda/hackerrank-orchestrate-september26" }],
     tech: ["Python", "Claude API", "Vision models", "Cash-flow forecasting", "LLM-as-judge", "Prompt engineering"],
     description:
       "An AI financial agent that answers \"Can I afford this?\" for 250 users. It reads bank history, payslip and bill images and messages in English and Indonesian, forecasts each user's balance 90 days ahead, and recommends paying in full, paying in part, installments, waiting or not buying, with an exact payment plan and any subscriptions to cut.",

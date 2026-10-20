@@ -37,7 +37,7 @@ The GRC Platform and OrderFlow have animated SVG architecture diagrams; PEBO has
 - **Air Quality Analyser**: hybrid LSTM and fuzzy-logic forecasting
 - **Asset & Income Tracker**: Flutter app with Firebase
 - **This portfolio**
-- **Buy or Wait?**: HackerRank Orchestrate 24-hour hackathon, an AI agent that decides if a user can safely afford a purchase (Python, Claude API)
+- **[Buy or Wait?](https://github.com/YasiruHarinda/hackerrank-orchestrate-september26)**: HackerRank Orchestrate 24-hour hackathon, an AI agent that decides if a user can safely afford a purchase (Python, Claude API)
 
 ## Tech stack
 

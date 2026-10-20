@@ -66,7 +66,7 @@ export default function About() {
         </div>
 
         <div>
-          <p className="about-text font-display text-[clamp(1.5rem,3.2vw,2.6rem)] font-medium leading-[1.25] tracking-[-0.015em] text-white">
+          <p className="about-text font-display text-[clamp(1.3rem,2.6vw,2.1rem)] font-medium leading-[1.3] tracking-[-0.015em] text-white">
             {PROFILE.about.split(" ").map((w, i) => (
               <span key={i} className="about-word">
                 {w}{" "}

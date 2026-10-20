@@ -331,6 +331,20 @@ export const PROJECTS = [
       "The site you're on, redesigned from scratch: a Three.js network scene in the hero, scroll-driven GSAP animations with Lenis smooth scrolling, animated SVG architecture diagrams, photo galleries and filterable project cards. All content lives in a single data file, the 3D scene is code-split and pauses off-screen, respects reduced-motion settings, and deploys to Vercel on every push.",
     role: "Design, development and deployment.",
   },
+  {
+    title: "Buy or Wait? - AI Affordability Agent",
+    year: "2026",
+    type: "Competition · HackerRank Orchestrate (24-hour hackathon)",
+    categories: ["AI / ML"],
+    image: "/images/projects/buy-or-wait.svg",
+    links: [],
+    tech: ["Python", "Claude API", "Vision models", "Cash-flow forecasting", "LLM-as-judge", "Prompt engineering"],
+    description:
+      "An AI financial agent that answers \"Can I afford this?\" for 250 users. It reads bank history, payslip and bill images and messages in English and Indonesian, forecasts each user's balance 90 days ahead, and recommends paying in full, paying in part, installments, waiting or not buying, with an exact payment plan and any subscriptions to cut.",
+    role:
+      "Built the whole solution solo in 24 hours as a hybrid: AI models only read images and messages (16 vision + ~30 text calls), and deterministic code does all the money maths, plan ranking and safety checks, so every output row is verified. Scored 87.3% on the solved samples and 95%+ on an LLM judge for explanation quality.",
+    highlights: ["87.3% composite score on the solved samples"],
+  },
 ];
 
 export const TECH_STACK = [

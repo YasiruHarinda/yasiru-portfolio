@@ -1,4 +1,4 @@
-# Yasiru Edirimanna — Portfolio
+# Yasiru Edirimanna - Portfolio
 
 **Live site: [yasiru-portfolio-blj2.vercel.app](https://yasiru-portfolio-blj2.vercel.app/)**
 
@@ -16,7 +16,7 @@ in-depth case studies of my main projects.
 | **About** | Bio that lights up word by word as you scroll, a photo that fades from black-and-white to colour, quick stats |
 | **What I do** | Three focus areas (full-stack, cloud & DevOps, AI engineering), each tied to the projects that prove it |
 | **Experience** | Scroll-drawn timeline: WSO2 software engineering internship and university teaching |
-| **Selected work** | Four featured case studies (below), then a draggable, filterable slider of more projects |
+| **Selected work** | Three featured case studies (below), then a draggable, filterable slider of more projects |
 | **Tech stack** | Scrolling marquee plus skills grouped by area |
 | **Background** | Education, certifications (including WSO2 Identity Server V7), achievements and activities |
 | **Contact** | Email (with copy button), LinkedIn, GitHub and Medium |
@@ -24,10 +24,20 @@ in-depth case studies of my main projects.
 ### Featured projects
 - **[WSO2 GRC Platform](https://github.com/wso2-open-operations/grc-tools)**: Governance, Risk & Compliance platform with an AI agent that validates audit evidence (Go, React, Claude API)
 - **[OrderFlow](https://github.com/YasiruHarinda/orderflow)**: event-driven .NET 10 microservices on Azure AKS with GitOps and canary releases
-- **[Mini Git](https://github.com/YasiruHarinda/mini-git)**: git's object model rebuilt from scratch in TypeScript, verified against real git
 - **[PEBO](https://cepdnaclk.github.io/e20-3yp-P-E-BO-Desk-Companion/)**: AI desk companion robot (Raspberry Pi, Gemini, AWS Rekognition), with a photo gallery
 
-The first three have animated SVG architecture diagrams.
+The GRC Platform and OrderFlow have animated SVG architecture diagrams; PEBO has a photo gallery.
+
+### More projects (slider)
+- **AI-Driven Feedback & Tutoring System**: final-year project, a multi-agent LLM grading and feedback pipeline connected to Moodle
+- **DECP**: Department Engagement & Career Platform, web and mobile (Node.js, Firebase, React Native)
+- **[CodeCity 3D](https://github.com/YasiruHarinda/codecity)**: turns any git repository into an interactive 3D city ([live demo](https://yasiruharinda.github.io/codecity/))
+- **[Mini Git](https://github.com/YasiruHarinda/mini-git)**: git's object model rebuilt from scratch in TypeScript, verified against real git ([live demo](https://yasiruharinda.github.io/mini-git/))
+- **Mona Dashboard**: real-time factory production monitoring
+- **Air Quality Analyser**: hybrid LSTM and fuzzy-logic forecasting
+- **Asset & Income Tracker**: Flutter app with Firebase
+- **This portfolio**
+- **Buy or Wait?**: HackerRank Orchestrate 24-hour hackathon, an AI agent that decides if a user can safely afford a purchase (Python, Claude API)
 
 ## Tech stack
 

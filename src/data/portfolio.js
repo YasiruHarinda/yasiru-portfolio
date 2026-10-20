@@ -292,6 +292,22 @@ export const PROJECTS = [
       "Enterprise, Security & DevOps Architect. Designed the system architecture and built the Node.js/Express backend: 24 REST endpoints across auth, posts, jobs, research, messaging, analytics and notifications, with JWT auth and Web Push (VAPID) notifications. Scaffolded the React Native app. The web client runs on Vercel and the API on Render.",
   },
   {
+    title: "CodeCity 3D - Codebase Visualiser",
+    year: "2026",
+    type: "Personal Project",
+    categories: ["Full-stack"],
+    image: "/images/projects/codecity.jpg",
+    links: [
+      { label: "Live demo", href: "https://yasiruharinda.github.io/codecity/" },
+      { label: "GitHub", href: "https://github.com/YasiruHarinda/codecity" },
+    ],
+    tech: ["TypeScript", "Node.js", "Three.js", "WebGL / GLSL shaders", "Vite", "Vitest", "Git internals", "GitHub Actions"],
+    description:
+      "Turns any git repository into an interactive 3D city. Each file is a building (height = lines of code, colour = how often it changes), each folder is a district of streets, and imports are arcs between buildings, with circular dependencies flagged in red. A timeline replays the repo's history as buildings grow, appear and vanish, and at night windows light up and the most-changed files glow.",
+    role:
+      "Designed and built it end to end: a Node.js CLI that reads churn and history straight from git and parses JS/TS, Python and C# imports (cycles found with Tarjan's algorithm), and a Three.js viewer that lays the city out as a squarified treemap and keeps 10,000+ files interactive with instanced meshes and custom shaders. 104 automated tests; deployed to GitHub Pages by GitHub Actions.",
+  },
+  {
     title: "Mona Dashboard - Factory Production Monitoring",
     year: "2024",
     type: "Team Project · Team of 5",

@@ -155,52 +155,6 @@ export const FEATURED_PROJECTS = [
   ],
 },
 {
-  title: "Mini Git",
-  diagram: "minigit",
-  tagline:
-    "Git's object model rebuilt from scratch in TypeScript, with an interactive web view that shows what git does inside a repository as you work.",
-  description:
-    "Stage a file, commit, branch and merge, and watch the real objects appear: which blobs and trees are new, which are reused through structural sharing, how the commit graph grows, and what a three-way merge compares when it reports a conflict. The objects aren't just like git's; they are git's, with the same encoding and the same SHA-1s, verified against real git.",
-  year: "2026",
-  type: "Personal Project",
-  links: [
-    { label: "Live demo", href: "https://yasiruharinda.github.io/mini-git/" },
-    { label: "GitHub", href: "https://github.com/YasiruHarinda/mini-git" },
-  ],
-  stats: [
-    { value: "186", label: "automated tests" },
-    { value: "12", label: "git-style CLI commands" },
-    { value: "4", label: "architecture decision records" },
-    { value: "0", label: "git libraries used" },
-  ],
-  pillars: [
-    {
-      title: "Version control engine",
-      points: [
-        "Content-addressed object store: blobs, trees, commits and refs with git-identical encoding",
-        "SHA-1 written by hand so the same engine runs unchanged in the browser and in Node",
-        "Line diff (LCS), merge-base discovery, fast-forward and three-way merge with conflict detection",
-        "Pure engine with a pluggable storage seam: in-memory for the web, real zlib loose objects on disk",
-        "export writes a real .git directory that git log, cat-file and fsck accept",
-      ],
-    },
-    {
-      title: "X-ray interface & testing",
-      points: [
-        "React web view: working tree / index / commit columns, a hand-drawn commit graph and an object inspector tagging each object new or reused",
-        "Diff between any two commits and a conflict resolver showing base / ours / theirs per region",
-        "In-browser terminal running the same command layer as the Node CLI",
-        "Differential tests run real git against mini-git's output and require identical object IDs",
-        "Architecture test keeps the engine free of I/O; deployed to GitHub Pages by GitHub Actions",
-      ],
-    },
-  ],
-  tech: [
-    "TypeScript", "React 19", "Node.js", "Vite", "Vitest", "SHA-1", "zlib",
-    "Git internals", "Differential testing", "GitHub Actions", "GitHub Pages",
-  ],
-},
-{
   title: "PEBO",
   tagline:
     "An AI desk companion robot that recognises you, talks with you, shows emotions with its eyes and arms, and is set up from a mobile app.",
@@ -306,6 +260,22 @@ export const PROJECTS = [
       "Turns any git repository into an interactive 3D city. Each file is a building (height = lines of code, colour = how often it changes), each folder is a district of streets, and imports are arcs between buildings, with circular dependencies flagged in red. A timeline replays the repo's history as buildings grow, appear and vanish, and at night windows light up and the most-changed files glow.",
     role:
       "Designed and built it end to end: a Node.js CLI that reads churn and history straight from git and parses JS/TS, Python and C# imports (cycles found with Tarjan's algorithm), and a Three.js viewer that lays the city out as a squarified treemap and keeps 10,000+ files interactive with instanced meshes and custom shaders. 104 automated tests; deployed to GitHub Pages by GitHub Actions.",
+  },
+  {
+    title: "Mini Git - Git Internals, Visualised",
+    year: "2026",
+    type: "Personal Project",
+    categories: ["Full-stack"],
+    image: "/images/projects/minigit.jpg",
+    links: [
+      { label: "Live demo", href: "https://yasiruharinda.github.io/mini-git/" },
+      { label: "GitHub", href: "https://github.com/YasiruHarinda/mini-git" },
+    ],
+    tech: ["TypeScript", "React 19", "Node.js", "Vite", "Vitest", "SHA-1", "zlib", "Git internals", "GitHub Actions"],
+    description:
+      "Git's object model rebuilt from scratch in TypeScript, with a web view that shows what git does inside a repository as you work: stage, commit, branch and merge, and watch the real blobs, trees and commits appear or get reused. The objects are git's own, with the same encoding and SHA-1s, verified against real git.",
+    role:
+      "Designed and built it end to end: a pure engine (hand-written SHA-1, LCS diff, three-way merge) that runs unchanged in the browser and in Node, a 12-command CLI, and a React view with a commit graph and object inspector. 186 tests, including differential tests against real git; no git libraries used.",
   },
   {
     title: "Mona Dashboard - Factory Production Monitoring",

@@ -2,6 +2,7 @@ import { lazy, Suspense, useLayoutEffect, useRef } from "react";
 import { FaMedium } from "react-icons/fa";
 import { FiArrowDown, FiArrowUpRight, FiGithub, FiLinkedin } from "react-icons/fi";
 import { PROFILE } from "../data/portfolio";
+import { track } from "../lib/analytics";
 import { gsap, prefersReducedMotion, scrollToId } from "../lib/scroll";
 
 const HeroScene = lazy(() => import("./HeroScene"));
@@ -88,13 +89,34 @@ export default function Hero() {
             <button onClick={() => scrollToId("work")} className="btn-primary">
               View my work <FiArrowUpRight />
             </button>
-            <a href={PROFILE.github} target="_blank" rel="noreferrer" className="btn-ghost" aria-label="GitHub">
+            <a
+              href={PROFILE.github}
+              onClick={() => track("social_click", { platform: "GitHub", location: "hero" })}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-ghost"
+              aria-label="GitHub"
+            >
               <FiGithub /> GitHub
             </a>
-            <a href={PROFILE.linkedin} target="_blank" rel="noreferrer" className="btn-ghost" aria-label="LinkedIn">
+            <a
+              href={PROFILE.linkedin}
+              onClick={() => track("social_click", { platform: "LinkedIn", location: "hero" })}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-ghost"
+              aria-label="LinkedIn"
+            >
               <FiLinkedin /> LinkedIn
             </a>
-            <a href={PROFILE.medium} target="_blank" rel="noreferrer" className="btn-ghost" aria-label="Medium">
+            <a
+              href={PROFILE.medium}
+              onClick={() => track("social_click", { platform: "Medium", location: "hero" })}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-ghost"
+              aria-label="Medium"
+            >
               <FaMedium /> Medium
             </a>
           </div>

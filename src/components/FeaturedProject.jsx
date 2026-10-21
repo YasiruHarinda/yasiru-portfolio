@@ -1,5 +1,6 @@
 import { FiArrowUpRight } from "react-icons/fi";
 import { DIAGRAMS } from "../data/diagrams";
+import { track } from "../lib/analytics";
 import ArchitectureDiagram from "./ArchitectureDiagram";
 import ProjectGallery from "./ProjectGallery";
 
@@ -32,7 +33,14 @@ export default function FeaturedProject({ p: P }) {
 
           <div className="mt-auto flex flex-wrap gap-3 pt-10">
             {P.links.map((l, i) => (
-              <a key={l.href} href={l.href} target="_blank" rel="noreferrer" className={i === 0 ? "btn-primary" : "btn-ghost"}>
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => track("project_link_click", { project: P.title, link_label: l.label, link_url: l.href })}
+                target="_blank"
+                rel="noreferrer"
+                className={i === 0 ? "btn-primary" : "btn-ghost"}
+              >
                 {l.label} <FiArrowUpRight />
               </a>
             ))}

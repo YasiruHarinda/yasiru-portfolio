@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaMedium } from "react-icons/fa";
 import { FiArrowUp, FiArrowUpRight, FiCheck, FiCopy, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { PROFILE } from "../data/portfolio";
+import { track } from "../lib/analytics";
 import { scrollToId } from "../lib/scroll";
 
 export default function Contact() {
@@ -10,6 +11,7 @@ export default function Contact() {
   const copyEmail = async () => {
     try {
       await navigator.clipboard.writeText(PROFILE.email);
+      track("email_copy");
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -51,7 +53,11 @@ export default function Contact() {
         </p>
 
         <div data-reveal className="mt-10 flex flex-wrap items-center gap-3">
-          <a href={`mailto:${PROFILE.email}`} className="btn-primary !px-6 !py-3.5 text-base">
+          <a
+            href={`mailto:${PROFILE.email}`}
+            onClick={() => track("email_click", { location: "contact" })}
+            className="btn-primary !px-6 !py-3.5 text-base"
+          >
             {PROFILE.email} <FiArrowUpRight />
           </a>
           <button onClick={copyEmail} className="btn-ghost !py-3.5" aria-live="polite">
@@ -68,6 +74,11 @@ export default function Contact() {
             >
               <a
                 href={href}
+                onClick={() =>
+                  label === "Email"
+                    ? track("email_click", { location: "contact_links" })
+                    : track("social_click", { platform: label, location: "contact" })
+                }
                 target={href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noreferrer"
                 className="group flex items-center justify-between px-1 py-6 text-zinc-300 transition-colors hover:text-white sm:px-6"

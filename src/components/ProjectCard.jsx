@@ -3,6 +3,7 @@ import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useSpotlight } from "../hooks/useSpotlight";
+import { track } from "../lib/analytics";
 import SpotlightOverlay from "./SpotlightOverlay";
 
 const ProjectCard = forwardRef(function ProjectCard({ p, className = "" }, outerRef) {
@@ -74,6 +75,7 @@ const ProjectCard = forwardRef(function ProjectCard({ p, className = "" }, outer
               <a
                 key={l.href}
                 href={l.href}
+                onClick={() => track("project_link_click", { project: p.title, link_label: l.label, link_url: l.href })}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1 text-sm font-medium text-white underline decoration-white/20 underline-offset-4 transition-colors hover:text-signal hover:decoration-signal"

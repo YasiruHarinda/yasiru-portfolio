@@ -326,9 +326,9 @@ export const PROJECTS = [
       { label: "GitHub", href: "https://github.com/YasiruHarinda/yasiru-portfolio" },
       { label: "Site", href: "https://yasiru-portfolio-blj2.vercel.app/" },
     ],
-    tech: ["React 19", "Vite", "Tailwind CSS", "GSAP ScrollTrigger", "Three.js", "Framer Motion", "Lenis", "Vercel"],
+    tech: ["React 19", "Vite", "Tailwind CSS", "GSAP ScrollTrigger", "Three.js", "Framer Motion", "Lenis", "Vercel", "GA4", "Google Tag Manager"],
     description:
-      "The site you're on, redesigned from scratch: a Three.js network scene in the hero, scroll-driven GSAP animations with Lenis smooth scrolling, animated SVG architecture diagrams, photo galleries and filterable project cards. All content lives in a single data file, the 3D scene is code-split and pauses off-screen, respects reduced-motion settings, and deploys to Vercel on every push.",
+      "The site you're on, redesigned from scratch: a Three.js network scene in the hero, scroll-driven GSAP animations with Lenis smooth scrolling, animated SVG architecture diagrams, photo galleries and filterable project cards. All content lives in a single data file, the 3D scene is code-split and pauses off-screen, respects reduced-motion settings, and deploys to Vercel on every push. Visits and clicks are measured with GA4 through Google Tag Manager (custom events for project, social and email clicks), and the site has technical SEO: canonical URL, JSON-LD structured data, sitemap and Search Console.",
     role: "Design, development and deployment.",
   },
   {
@@ -355,6 +355,7 @@ export const TECH_STACK = [
   { group: "Observability & Quality", items: ["OpenTelemetry", "Prometheus", "Grafana", "Loki", "Tempo", "xUnit", "Testcontainers", "k6", "CodeQL", "Trivy"] },
   { group: "Frontend & Mobile", items: ["React", "React Native", "Flutter", "Tailwind CSS", "Vite", "TanStack Query"] },
   { group: "AI / ML", items: ["LLM APIs", "Prompt Engineering", "Multi-agent systems", "OpenCV", "LSTM", "Machine Learning"] },
+  { group: "Analytics & SEO", items: ["Google Analytics 4", "Google Tag Manager", "Google Search Console", "Technical SEO", "JSON-LD"] },
 ];
 
 export const EDUCATION = [

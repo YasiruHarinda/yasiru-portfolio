@@ -5,6 +5,13 @@ const all = TECH_STACK.flatMap((g) => g.items);
 const half = Math.ceil(all.length / 2);
 const rows = [all.slice(0, half), all.slice(half)];
 
+// The last group stretches over whatever its row has left, so the grid never shows empty cells.
+// Class names are spelled out in full so Tailwind can find them.
+const SM_SPAN = { 0: "sm:col-span-2", 1: "" };
+const LG_SPAN = { 0: "lg:col-span-3", 1: "lg:col-span-2", 2: "" };
+const before = TECH_STACK.length - 1;
+const lastSpan = `${SM_SPAN[before % 2]} ${LG_SPAN[before % 3]}`;
+
 function MarqueeRow({ items, reverse }) {
   // The list is rendered twice so the -50% translate loops seamlessly.
   return (
@@ -44,7 +51,7 @@ export default function TechStack() {
             <div
               key={g.group}
               data-reveal
-              className={`bg-ink-950 p-6 md:p-8 ${i === TECH_STACK.length - 1 ? "sm:col-span-2 lg:col-span-3" : ""}`}
+              className={`bg-ink-950 p-6 md:p-8 ${i === TECH_STACK.length - 1 ? lastSpan : ""}`}
             >
               <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-signal">{g.group}</h3>
               <ul className="mt-5 flex flex-wrap gap-2">
